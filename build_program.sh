@@ -3,21 +3,28 @@
 #  echo $?  exit nom respect de la sintaxe
 
 
-echo "test du : $2"
+if test -z "$2"
+then
+	echo "erreur syntaxe !";
+	exit 1
+fi
 
-test -z "$2"
-echo $?
+
+
+
 
 if test -e "$1"
 then
 	if test -e "$2";
 	then
 		echo "le nom choisis existe deja dans votre repertoire";
+		exit 1;
 	else
 		echo "le mot n'existe pas , c'est parfais";
-		echo $? ;
+		exit 0 ;
 	fi
 
 else
 	echo "fichier introuvable...";
+	exit 1
 fi
