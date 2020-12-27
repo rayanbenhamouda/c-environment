@@ -17,11 +17,12 @@ if test -e "$1"
 then
 	if test -e "$2";
 	then
-		echo "le nom choisis existe deja dans votre repertoire";
-		exit 1;
+		echo "le fichier 2 existe deja dans votre repertoire";
+		exit 1
 	else
-		echo "le mot n'existe pas , c'est parfais";
-		exit 0 ;
+		echo "le fichier 2 n'existe pas , c'est parfait";
+		gcc "$1" -o "$2"
+		exit 0 
 	fi
 
 else
