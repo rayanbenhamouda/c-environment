@@ -1,6 +1,7 @@
 #! /bin/bash
 
-#  echo $?  exit nom respect de la sintaxe
+#  echo $?  exit nom respect de la syntaxe
+
 
 
 if test -z "$2"
@@ -17,15 +18,19 @@ if test -e "$1"
 then
 	if test -e "$2";
 	then
-		echo "le fichier 2 existe deja dans votre repertoire";
+		echo "le fichier $2 existe deja dans votre repertoire";
 		exit 1
 	else
-		echo "le fichier 2 n'existe pas , c'est parfait";
+		echo "le fichier $2 n'existe pas , c'est parfait";
 		gcc "$1" -o "$2"
-		exit 0 
+		echo "$2" >> fichier.txt
+		exit 0
+
 	fi
 
 else
 	echo "fichier introuvable...";
 	exit 1
 fi
+#--------------------------------------------------------------------
+#echo -n        affiche a la ligne
