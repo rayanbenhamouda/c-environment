@@ -23,8 +23,14 @@ then
 	else
 		echo "le fichier $2 n'existe pas , c'est parfait";
 		gcc "$1" -o "$2"
-		echo "$2" >> fichier.txt
-		exit 0
+		if $?
+		then 
+			echo "$2" >> fichier.txt
+			exit 0
+		else
+			echo "erreur"
+			exit 1
+		fi
 
 	fi
 
