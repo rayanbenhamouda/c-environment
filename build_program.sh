@@ -19,7 +19,20 @@ then
 	if test -e "$2";
 	then
 		echo "le fichier $2 existe deja dans votre repertoire";
-		exit 1;
+		read -p "on continue (o/n) ?" RES
+		if [ ${RES} = "o" ]; then
+			gcc "$1" -o "$2"
+			echo "$2" >> fichier.txt;
+			exit 0;
+		elif [ ${RES} = "n" ]; then
+			echo "dossier non remplacée"
+       		        exit 0;
+		else
+			echo "erreur syntaxe"
+			exit 1;
+		fi
+						
+		
 	else
 		echo "le fichier $2 n'existe pas , c'est parfait";
 		gcc "$1" -o "$2"
@@ -37,4 +50,3 @@ fi
 #			echo "lololololo";
 #                        echo "$2" >> fichier.txt;
 #                       exit 0;
-
