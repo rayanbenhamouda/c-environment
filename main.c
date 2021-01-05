@@ -25,33 +25,4 @@ int main(int argc ,char **argv){
         }
         return 0;
     }
-    /*
-    else if(argv[1] = NULL){
-        printf("nice");
-    }
-
-    for(int i=0)
-    int test = atoi(argv[1]);
-    printf("j'affiche %d",test);
-    if(test==5){
-        printf("\n passsss");
-    }
-    else{
-        printf("\n probleme");
-    }
-    */
 }
-
-
-/*
-#include <stdio.h>
-
-int main()
-{
-	
-	for(int i=1; i<11 ;i++){
-		printf("%d\n",i);
-	}
-	return 0;
-}
-*/
