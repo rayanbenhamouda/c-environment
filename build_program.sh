@@ -5,7 +5,7 @@
 
 
 if test -z "$2"; then
-	echo "erreur nombre manque 1 ou 2 nom de fichier en argument"
+	echo -e "erreur nombre d'argument: manque un nom de fichier en argument 1 et/ou le nom du programme a généré en argument 2 \nexemple:./build_program.sh file1 file2"
 	exit 1
 fi
 
