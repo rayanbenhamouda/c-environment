@@ -14,7 +14,7 @@ int main(int argc ,char **argv){
     
     for(int i=0; i<nbr ; i++){
         if(argv[1][i]<48 || argv[1][i]>57){
-            return 0;
+            return 1;
         }
         
     }
@@ -26,6 +26,6 @@ int main(int argc ,char **argv){
         return 0;
     }
     else{
-	    return 0;
+	    return 1;
     }
 }
